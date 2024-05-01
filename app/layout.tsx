@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Provider } from "@/components/provider";
 
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
 
 const spaceMono = localFont({
   src: [
@@ -30,46 +31,64 @@ const spaceMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kaminari",
+  title: "AppVerify",
   generator: "Next.js",
-  applicationName: "Kaminari",
+  applicationName: "AppVerify",
   referrer: "origin-when-cross-origin",
   keywords: [
-    "Next.js",
-    "React",
-    "JavaScript",
-    "Boilerplate",
-    "Template",
-    "shadcn-ui",
+    "Disposable Email Detection",
+    "Fraud Prevention",
+    "Email Verification",
+    "Anti-Fraud Solutions",
+    "Email Validation",
+    "Disposable Email Checker",
+    "Fraudulent Activity Prevention",
+    "Secure Email Verification",
+    "Online Security",
+    "Email Fraud Detection",
+    "Anti-Spam Email Verification",
+    "Disposable Email Blocker",
+    "Email Security",
+    "Fraud Detection Software",
+    "Email Authenticity Check",
+    "Prevent Email Fraud",
+    "Email Scam Prevention",
+    "Disposable Email Prevention",
+    "Email Verification Service",
+    "Email Fraud Protection",
   ],
-  authors: [{ name: "Virgil", url: "https://obedd.vercel.app" }],
+  authors: [
+    { name: "Virgil", url: "https://obedd.vercel.app" },
+    { name: "AppAutomations", url: "https://appautomations.com" },
+  ],
   creator: "Virgil",
-  publisher: "Virgil",
+  publisher: "AppAutomations",
   alternates: {},
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://kaminari.vercel.app"),
+  metadataBase: new URL("https://AppVerify.vercel.app"),
   openGraph: {
-    title: "Kaminari",
-    description: "Next.js, TailwindCSS and shadcn-ui Starter Template",
-    url: "https://kaminari.vercel.app",
-    siteName: "Kaminari",
-    images: [
-      {
-        url: "https://kaminari.vercel.app/og.png",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "https://kaminari.vercel.app/og-dark.png",
-        width: 1800,
-        height: 1600,
-        alt: "Next.js, TailwindCSS and shadcn-ui Starter Template",
-      },
-    ],
+    title: "AppVerify",
+    description:
+      "AppVerify is a secure platform and api that detects disposable email addresses, preventing fraudulent activities and ensuring the integrity of online interactions.",
+    url: "https://AppVerify.vercel.app",
+    siteName: "AppVerify",
+    // images: [
+    //   {
+    //     url: "https://AppVerify.vercel.app/og.png",
+    //     width: 800,
+    //     height: 600,
+    //   },
+    //   {
+    //     url: "https://AppVerify.vercel.app/og-dark.png",
+    //     width: 1800,
+    //     height: 1600,
+    //     alt: "Next.js, TailwindCSS and shadcn-ui Starter Template",
+    //   },
+    // ],
     locale: "en-US",
     type: "website",
   },
@@ -88,11 +107,12 @@ export default function RootLayout({
       <body className={`${spaceMono.className}`}>
         <Provider attribute="class" defaultTheme="system" enableSystem>
           <main
-            className={`text-zinc-700 bg-white dark:text-zinc-400 dark:bg-black`}
+            className={`bg-white text-zinc-700 dark:bg-black dark:text-zinc-400`}
           >
             {children}
           </main>
         </Provider>
+        <Toaster />
       </body>
     </html>
   );

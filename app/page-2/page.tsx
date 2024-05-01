@@ -26,16 +26,16 @@ export default function Home() {
             </p>
 
             <div className="">
-              <Button size="xl" className="w-full font-bold" variant="brand">
-                <a
-                  href="https://github.com/lucky-chap/kaminari"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="pb-1 dark:text-zinc-800 text-zinc-100"
-                >
+              <a
+                href="https://github.com/lucky-chap/kaminari"
+                target="_blank"
+                rel="noreferrer"
+                className="pb-1 text-zinc-100 dark:text-zinc-800"
+              >
+                <Button size="xl" className="w-full font-bold" variant="brand">
                   Repo
-                </a>{" "}
-              </Button>
+                </Button>
+              </a>{" "}
             </div>
           </div>
         </Wrapper>
@@ -43,7 +43,7 @@ export default function Home() {
 
       {/* second half */}
 
-      <section className="hidden lg:flex h-screen w-full flex-col justify-center items-center bg-[#e0f5ff] p-9">
+      <section className="hidden h-screen w-full flex-col items-center justify-center bg-[#e0f5ff] p-9 lg:flex">
         <Image src={manWIthRobot} alt="Man sitting in wheelchair" />
       </section>
     </section>

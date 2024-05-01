@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Wrapper from "@/components/wrapper";
-import { Button } from "@/components/ui/button";
 
-import robot from "@/public/images/robot.png";
+import envelope from "@/public/images/envelope.png";
+import { VerifyEmailInputAndButton } from "@/components/ui/inputWithButton";
 
 export default function Home() {
   return (
@@ -15,34 +15,21 @@ export default function Home() {
             <span
               className={`-mt-14 inline-block text-[64px] font-bold text-black dark:text-white`}
             >
-              01
+              About
             </span>
             <p className="pb-6 font-medium">
-              Kami (short for Kaminari) is a modern Next.js, Tailwind CSS and
-              shadcn-ui boilerplate that includes all you need to build amazing
-              projects. No need to spend time on configuring the basic needs of
-              a project. I did that for you - Created by{" "}
-              <a
-                href="https://obedd.vercel.app"
-                target="_blank"
-                rel="noreferrer"
-                className="pb-1 text-zinc-800 dark:text-zinc-100 underline font-medium"
-              >
-                Virgil
-              </a>{" "}
+              {`AppVerify is a cutting-edge disposable email detector and
+              validator, powered by a robust API. It's designed to protect your
+              online platforms from temporary or junk email addresses, ensuring
+              only valid and long-term users gain access. With AppVerify, you
+              can maintain the integrity of your user base, improve data
+              quality, and enhance security. Developed with a focus on
+              reliability and efficiency, AppVerify is your go-to solution for
+              disposable email detection and validation.`}
             </p>
 
             <div className="">
-              <Button size="xl" className="w-full font-bold" variant="brand">
-                <a
-                  href="https://github.com/lucky-chap/kaminari"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="pb-1 dark:text-zinc-800 text-zinc-100"
-                >
-                  Repo
-                </a>{" "}
-              </Button>
+              <VerifyEmailInputAndButton />
             </div>
           </div>
         </Wrapper>
@@ -50,8 +37,12 @@ export default function Home() {
 
       {/* second half */}
 
-      <section className="hidden lg:flex h-screen w-full flex-col justify-center items-center bg-[#d6ebe9] p-9">
-        <Image src={robot} alt="Man sitting in wheelchair" />
+      <section className="p-29 hidden h-screen w-full flex-col items-center justify-center bg-[#d6ebe9] lg:flex">
+        <Image
+          src={envelope}
+          alt="Happy envelope 3d model"
+          style={{ width: "60%" }}
+        />
       </section>
     </section>
   );
